@@ -7,15 +7,15 @@ import mysql.connector
 conexion = mysql.connector.connect(
     host='localhost',
     user= 'root',
-    password='xxxxxxxx',
-    datebase= 'bbdd_prueba'
+    password='Andrea90+',
+    database= 'bbdd_prueba'
 )
 
 cursor = conexion.cursor()
 
 nuevo_usuario = ('Juan', 30)
 
-consulta = 'INSERT INTO usuarios(nombre, edad) VALUES (%S,%S)'
+consulta = 'INSERT INTO usuario(nombre, edad) VALUES (%s,%s)'
 
 cursor.execute(consulta, nuevo_usuario)
 
